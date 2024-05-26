@@ -30,5 +30,16 @@ namespace PharmacyProgramm
             mn.Show();
             this.Close();
         }
+
+        private void btnWatchOrder_Click(object sender, RoutedEventArgs e)
+        {
+            WatchOrder wo = new WatchOrder();
+            wo.Show();
+        }
+
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

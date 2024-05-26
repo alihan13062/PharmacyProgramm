@@ -34,7 +34,7 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="LightSkyBlue"/>
+                    <Setter Property="Foreground" Value="#FF87FAA6"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -58,10 +58,10 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#FF7ABCF0"/>
+                                <Setter Property="Background" Value="#FF87FAA6"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="#FF4FA8EE"/>
+                                <Setter Property="Background" Value="#FF41F371"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Opacity" Value="0.5"/>
@@ -73,7 +73,23 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="btnBack" Style="{StaticResource btn}" Content="Выйти из учётной записи" HorizontalAlignment="Center" VerticalAlignment="Top" Width="330" Height="37" Click="btnBack_Click" Margin="173,348,189,0"/>
+        <Border Background="White" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8" />
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="45*" />
+                    <RowDefinition Height="45*"/>
+                    <RowDefinition Height="87*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Продавец" FontFamily="Courier New" FontSize="36" HorizontalAlignment="Center" Width="362" TextAlignment="Center"/>
+                <Image x:Name="imglogo"  Grid.Row="1" Source="Logo.png" HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="70"/>
 
+                <Button x:Name="btnWatchOrder" Grid.Row="3" Style="{StaticResource btn}" Content="Посмотр всех заказов" HorizontalAlignment="Center" VerticalAlignment="Top" Width="450" Height="40" FontSize="18" Click="btnWatchOrder_Click"/>
+                <Button x:Name="btnOrder" Grid.Row="2" Style="{StaticResource btn}" Content="Оформить заказ" HorizontalAlignment="Center" VerticalAlignment="Top" Width="530" Height="40" FontSize="18" Click="btnOrder_Click"/>
+
+                <Button x:Name="btnBack" Grid.Row="4" Style="{StaticResource btn}" Content="Выйти из учётной записи" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="40" FontSize="18" Click="btnBack_Click"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
