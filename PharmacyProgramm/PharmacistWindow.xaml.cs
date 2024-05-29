@@ -39,7 +39,9 @@ namespace PharmacyProgramm
 
         private void btnOrder_Click(object sender, RoutedEventArgs e)
         {
-
+            OrderCreate oc = new OrderCreate();
+            oc.Show();
+            this.Close();
         }
     }
 }

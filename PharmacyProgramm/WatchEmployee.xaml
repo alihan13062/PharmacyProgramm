@@ -1,11 +1,11 @@
-﻿<Window x:Class="PharmacyProgramm.WatchOrder"
+﻿<Window x:Class="PharmacyProgramm.WatchEmployee"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyProgramm"
         mc:Ignorable="d"
-        Title="Просмотр заказов" Height="550" Width="1300" MinHeight="550" MinWidth="1300" 
+        Title="Просмотр сотрудников" Height="550" Width="1080" MinHeight="550" MinWidth="1080" 
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="txtBox">
@@ -80,18 +80,15 @@
                 </ListView.Background>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding OrderID}" Header="Id" Width="30"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding C_Surname}" Header="Фамилия" Width="140"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding C_Name}" Header="Имя" Width="140"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding C_Patronymic}" Header="Отчество" Width="140"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding C_Phone}" Header="Телефон" Width="130"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding EmployeeID}" Header="Id" Width="30"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding E_Surname}" Header="Фамилия" Width="160"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding E_Name}" Header="Имя" Width="160"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding E_Patronymic}" Header="Отчество" Width="160"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding E_Phone}" Header="Телефон" Width="140"/>
 
-                        <GridViewColumn DisplayMemberBinding="{Binding P_Title}" Header="Препарат" Width="140"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding TotalCount}" Header="Количество" Width="90"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding E_Surname}" Header="Сотрудник" Width="140"/>
-
-                        <GridViewColumn DisplayMemberBinding="{Binding TotalPrice}" Header="Итоговая цена" Width="140"/>
-                        <GridViewColumn DisplayMemberBinding="{Binding DateOrder}" Header="Дата заказа" Width="160"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding J_Title}" Header="Должность" Width="140"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Logins}" Header="Логин" Width="130"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding Passwords}" Header="Пароль" Width="130"/>
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -10,7 +10,7 @@ namespace PharmacyProgramm
     {
         public static string GetConnectionSqlServer()
         {
-            return @"Data Source = DESKTOP-MJM6IQP\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=True";
+            return @"Data Source = DESKTOP-2GTC7VU\SQLEXPRESS;Initial Catalog=Pharmacy;Integrated Security=True";
         }
     }
 }

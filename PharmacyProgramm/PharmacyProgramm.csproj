@@ -65,8 +65,14 @@
       <DependentUpon>PharmacistWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SqkConnectionString.cs" />
+    <Compile Include="WatchEmployee.xaml.cs">
+      <DependentUpon>WatchEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WatchOrder.xaml.cs">
       <DependentUpon>WatchOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WatchStuff.xaml.cs">
+      <DependentUpon>WatchStuff.xaml</DependentUpon>
     </Compile>
     <Page Include="AdminWindow.xaml">
       <SubType>Designer</SubType>
@@ -92,7 +98,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WatchEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WatchOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WatchStuff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -39,12 +39,14 @@ namespace PharmacyProgramm
 
         private void btnWatchEmp_Click(object sender, RoutedEventArgs e)
         {
-
+            WatchEmployee we = new WatchEmployee();
+            we.Show();
         }
 
         private void btnWatchPrep_Click(object sender, RoutedEventArgs e)
         {
-
+            WatchStuff ws = new WatchStuff();
+            ws.Show();
         }
 
         private void btnEditOrder_Click(object sender, RoutedEventArgs e)
