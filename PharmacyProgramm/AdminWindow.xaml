@@ -92,7 +92,6 @@
                 <Button x:Name="btnEditOrder" Grid.Row="2" Style="{StaticResource btn}" Content="Редактировать заказ" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" Height="30" Click="btnEditOrder_Click"/>
                 <Button x:Name="btnEditEmp" Grid.Row="3" Style="{StaticResource btn}" Content="Редактировать сотрудника" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" Height="30" Click="btnEditEmp_Click"/>
                 <Button x:Name="btnBack" Grid.Row="8" Style="{StaticResource btn}" Content="Выйти из учётной записи" HorizontalAlignment="Center" VerticalAlignment="Top" Width="230" Height="30" Click="btnBack_Click"/>
-
                 <Button x:Name="btnEditPrep" Grid.Row="4" Style="{StaticResource btn}" Content="Редактировать товар" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" Height="30" Click="btnEditPrep_Click"/>
                 <Button x:Name="btnWatchPrep" Grid.Row="7" Style="{StaticResource btn}" Content="Просмотр всех товаров" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="30" Click="btnWatchPrep_Click"/>
                 <Button x:Name="btnWatchOrder" Grid.Row="5" Style="{StaticResource btn}" Content="Просмотр всех заказов" HorizontalAlignment="Center" VerticalAlignment="Top" Width="350" Height="30" Click="btnWatchOrder_Click"/>

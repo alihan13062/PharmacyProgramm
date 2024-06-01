@@ -44,12 +44,6 @@ namespace PharmacyProgramm
             Regex regex = new Regex("[^0-9]");
             e.Handled = regex.IsMatch(e.Text);
         }
-        private void menuBack_Click(object sender, RoutedEventArgs e)
-        {
-            PharmacistWindow prod = new PharmacistWindow();
-            prod.Show();
-            this.Close();
-        }
         private void MyDatePicker_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             e.Handled = true;

@@ -51,7 +51,9 @@ namespace PharmacyProgramm
 
         private void btnEditOrder_Click(object sender, RoutedEventArgs e)
         {
-
+            EditOrder eo = new EditOrder();
+            eo.Show();
+            this.Close();
         }
 
         private void btnEditEmp_Click(object sender, RoutedEventArgs e)

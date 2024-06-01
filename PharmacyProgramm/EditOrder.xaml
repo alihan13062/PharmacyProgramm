@@ -1,11 +1,11 @@
-﻿<Window x:Class="PharmacyProgramm.OrderCreate"
+﻿<Window x:Class="PharmacyProgramm.EditOrder"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PharmacyProgramm"
         mc:Ignorable="d"
-        Title="Оформление заказа" Height="650" Width="900" MinHeight="571" MinWidth="800"
+        Title="Редактирование заказа" Height="650" Width="900" MinHeight="571" MinWidth="800"
         WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Style TargetType="ComboBox" x:Key="cmbBox">
@@ -130,41 +130,43 @@
                 <RowDefinition Height="49*"/>
             </Grid.RowDefinitions>
             
-            <Button Grid.Row="3" Grid.Column="1" x:Name="btnSave" Style="{StaticResource btn}" Content="Оформить заказ" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="Visible" Width="200" Height="30" Click="btnSave_Click"/>
-            
-
             <Grid Grid.Row="2" VerticalAlignment="Top" Height="485" Margin="0,1,0,0" Grid.ColumnSpan="4">
                 <!--Visibility="Visible"-->
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,375,780,80" Text="Цена:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,229,710,226" Text="Сотрудник:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="498,93,260,361" Text="Телефон:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="498,276,247,179" Text="Описание:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,93,723,361" Text="Отчество:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,49,735,405" Text="Фамилия:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="498,49,301,405" Text="Имя:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,135,767,319" Text="Адрес:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="229,375,573,80" Text="Цена:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="229,229,503,226" Text="Сотрудник:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="570,93,188,361" Text="Телефон:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="557,276,188,179" Text="Описание:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="215,93,530,361" Text="Отчество:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="215,49,542,405" Text="Фамилия:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="570,49,229,405" Text="Имя:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="215,135,574,319" Text="Адрес:"/>
 
-                <TextBox Name="FIO" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="154,93,491,361" Text=""/>
-                <TextBox Name="phone" Style="{StaticResource txtBox}" FontSize="16" PreviewTextInput="number" MaxLines="1" MaxLength="11" Margin="612,93,53,361" Text=""/>
-                <TextBox Name="txtAdres" Style="{StaticResource txtBox}" FontSize="16" PreviewTextInput="noEng" MaxLength="50" Margin="110,135,491,319" Text=""/>
-                <TextBox Name="txtInfo" Style="{StaticResource txtBox}" FontSize="16" TextWrapping="Wrap" Margin="499,311,53,80" Text="" IsEnabled="False"/>
-                <TextBox x:Name="Sur" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="142,49,491,405" Text=""/>
-                <TextBox x:Name="Name" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="571,49,53,405" Text=""/>
-                <TextBox x:Name="txtPrice" Style="{StaticResource txtBox}" PreviewTextInput="number" MaxLines="1" MaxLength="10" Margin="97,375,538,80" Text="" IsEnabled="False"/>
-                <ComboBox Name="combEmp" Style="{StaticResource cmbBox}" FontSize="16" HorizontalAlignment="Left" Margin="167,229,0,0" VerticalAlignment="Top" Width="167" Height="30"/>
-                <TextBlock x:Name="txtID_Copy" Style="{StaticResource txtBlock}" Visibility="Visible" Margin="349,10,348,441" Text="Данные клиента"/>
-                <TextBlock x:Name="txtID_Copy1" Style="{StaticResource txtBlock}" Visibility="Visible" Margin="349,180,348,264"><Run Text="Данные "/><Run Text="заказа"/></TextBlock>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,276,723,178" Text="Препарат:"/>
-                <ComboBox x:Name="combPrep" Style="{StaticResource cmbBox}" FontSize="16" HorizontalAlignment="Left" Margin="154,277,0,0" VerticalAlignment="Top" Width="180" Height="30" SelectionChanged="combPrep_SelectionChanged"/>
-                <DatePicker x:Name="dateOrder" HorizontalAlignment="Left" PreviewKeyDown="MyDatePicker_PreviewKeyDown" Margin="585,229,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Courier New" Width="234" Height="30"/>
+                <TextBox Name="FIO" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="347,93,335,361" Text=""/>
+                <TextBox Name="phone" Style="{StaticResource txtBox}" FontSize="16" PreviewTextInput="number" MaxLines="1" MaxLength="11" Margin="684,93,52,361" Text=""/>
+                <TextBox Name="txtAdres" Style="{StaticResource txtBox}" FontSize="16" PreviewTextInput="noEng" MaxLength="50" Margin="303,135,335,319" Text=""/>
+                <TextBox Name="txtInfo" Style="{StaticResource txtBox}" FontSize="16" IsEnabled="False" TextWrapping="Wrap" Margin="558,311,45,80" Text=""/>
+                <TextBox x:Name="Sur" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="335,49,335,405" Text=""/>
+                <TextBox x:Name="Name" Style="{StaticResource txtBox}" PreviewTextInput="rus" MaxLines="1" MaxLength="45" Margin="643,49,52,405" Text=""/>
+                <TextBox x:Name="txtPrice" Style="{StaticResource txtBox}" PreviewTextInput="number" MaxLines="1" MaxLength="10" Margin="304,375,335,80" Text="" IsEnabled="False"/>
+                <ComboBox Name="combEmp" Style="{StaticResource cmbBox}" FontSize="16" HorizontalAlignment="Left" Margin="374,229,0,0" VerticalAlignment="Top" Width="163" Height="30"/>
+                <TextBlock x:Name="txtID_Copy" Style="{StaticResource txtBlock}" Visibility="Visible" Margin="468,10,229,441" Text="Данные клиента"/>
+                <TextBlock x:Name="txtID_Copy1" Style="{StaticResource txtBlock}" Visibility="Visible" Margin="468,174,229,270"><Run Text="Данные "/><Run Text="заказа"/></TextBlock>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="229,276,516,178" Text="Препарат:"/>
+                <ComboBox x:Name="combPrep" Style="{StaticResource cmbBox}" FontSize="16" HorizontalAlignment="Left" Margin="361,277,0,0" VerticalAlignment="Top" Width="176" Height="30" SelectionChanged="combPrep_SelectionChanged"/>
+                <DatePicker x:Name="dateOrder" HorizontalAlignment="Left" PreviewKeyDown="MyDatePicker_PreviewKeyDown" Margin="644,229,0,0" VerticalAlignment="Top" FontSize="16" FontFamily="Courier New" Width="183" Height="30"/>
 
-                <TextBlock Style="{StaticResource txtBlock}" Margin="498,229,292,226" Text="Дата:"/>
-                <TextBlock Style="{StaticResource txtBlock}" Margin="22,326,706,129" Text="Количество:"/>
-                <TextBox x:Name="txtCount" Style="{StaticResource txtBox}" PreviewTextInput="number" MaxLines="1" MaxLength="2" Margin="171,326,538,129" Text="" IsEnabled="True"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="557,229,233,226" Text="Дата:"/>
+                <TextBlock Style="{StaticResource txtBlock}" Margin="229,326,499,129" Text="Количество:"/>
+                <TextBox x:Name="txtCount" Style="{StaticResource txtBox}" PreviewTextInput="number" MaxLines="1" MaxLength="2" Margin="378,326,335,129" Text="" IsEnabled="True"/>
+
+                <ComboBox x:Name="combID" Style="{StaticResource cmbBox}" Visibility="Visible" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Width="117" Height="25" SelectionChanged="combID_SelectionChanged"/>
+                <TextBlock x:Name="txtID" Style="{StaticResource txtBlock}" Visibility="Visible" Margin="10,11,708,447" Text="Код заказа"/>
 
             </Grid>
-            <Button Grid.Row="2" x:Name="btnCalc" Style="{StaticResource btn}" Content="Рассчетать" Visibility="Visible" Width="250" Height="20" Margin="91,415,325.273,74" Grid.ColumnSpan="2" Click="btnCalc_Click"/>
+            <Button Grid.Row="2" x:Name="btnCalc" Style="{StaticResource btn}" Content="Рассчетать" Visibility="Visible" Height="29" Margin="130,414,130,66" Click="btnCalc_Click" Grid.Column="1"/>
             <Button Grid.Row="3" Grid.Column="0" x:Name="btnBack" Style="{StaticResource btn}" Content="Вернуться" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Visible" Width="120" Height="30" Click="btnBack_Click"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="btnSaveEdit" Style="{StaticResource btn}" Content="Сохранить" VerticalAlignment="Top" HorizontalAlignment="Left" Visibility="Visible" Width="100" Height="30" Margin="90,0,0,0" Click="btnSaveEdit_Click"/>
+            <Button Grid.Row="3" Grid.Column="1" x:Name="btnDelete" Style="{StaticResource btnDel}" Content="Удалить" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Visible" Width="100" Height="30" Margin="0,0,90,0" Click="btnDelete_Click"/>
 
         </Grid>
     </Border>
