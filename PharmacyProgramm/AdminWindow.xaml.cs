@@ -58,12 +58,16 @@ namespace PharmacyProgramm
 
         private void btnEditEmp_Click(object sender, RoutedEventArgs e)
         {
-
+            EditEmployee ee = new EditEmployee();
+            ee.Show();
+            this.Close();
         }
 
         private void btnEditPrep_Click(object sender, RoutedEventArgs e)
         {
-
+            EditPreparation ep = new EditPreparation();
+            ep.Show();
+            this.Close();
         }
     }
 }
